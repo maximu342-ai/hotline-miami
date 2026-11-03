@@ -1,4 +1,4 @@
-# Roadmap de Aprendizaje y Practicas Frontend
+# Roadmap de Aprendizaje y Practicas Frontend super prompteado nada de texto escrito a mano jaja
 
 Repositorio centralizado para el estudio, estructuracion y practica de tecnologias de desarrollo web moderno, enfocado en flujos de trabajo optimizados con Vite.
 

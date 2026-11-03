@@ -4,9 +4,11 @@ import {LabeledButton} from './components/molecule/labeledButton';
 function App() {
 
   return (
-    <>
-    <LabeledButton label="Example Label" buttonText="Example Button" />
-    </>
+  <>    
+    <LabeledButton label="" buttonText="Example Button" />
+    <LabeledButton label="" buttonText="Example Button" />
+    <LabeledButton label="" buttonText="Example Button" />
+  </>
   )
 }
 

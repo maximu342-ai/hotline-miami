@@ -1,6 +1,6 @@
 import React from 'react';
 import { Label } from '../atoms/label';
-import { Button, ButtonProps } from '../atoms/button';
+import { Button, type ButtonProps } from '../atoms/button';
 
 export interface LabeledButtonProps {
   label: string;

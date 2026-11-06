@@ -1,0 +1,109 @@
+.animated-background {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Gradient layers */
+.gradient-pink,
+.gradient-blue {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Pink gradient */
+.gradient-pink {
+  background: linear-gradient(
+    135deg,
+    #ec4899 0%,
+    #f472b6 45%,
+    #a855f7 100%
+  );
+}
+
+/* Blue gradient fades in and out */
+.gradient-blue {
+  background: linear-gradient(
+    135deg,
+    #2563eb 0%,
+    #3b82f6 45%,
+    #06b6d4 100%
+  );
+
+  animation: gradientFade 12s ease-in-out infinite;
+}
+
+@keyframes gradientFade {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Floating glow effects */
+.glow {
+  position: absolute;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Pink glow */
+.glow-pink {
+  top: -10rem;
+  left: -10rem;
+  background: rgba(249, 168, 212, 0.4);
+
+  animation: floatPink 14s ease-in-out infinite;
+}
+
+/* Blue glow */
+.glow-blue {
+  bottom: -10rem;
+  right: -10rem;
+  background: rgba(147, 197, 253, 0.4);
+
+  animation: floatBlue 10s ease-in-out infinite;
+}
+
+@keyframes floatPink {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translate(120px, 80px) scale(1.4);
+    opacity: 0.6;
+  }
+}
+
+@keyframes floatBlue {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translate(-100px, -80px) scale(1.3);
+    opacity: 0.6;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .gradient-blue,
+  .glow {
+    animation: none;
+  }
+}

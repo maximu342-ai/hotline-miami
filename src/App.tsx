@@ -1,15 +1,17 @@
-import './App.css'
-import {LabeledButton} from './components/molecule/labeledButton';
+import { Background } from './components/background/Background';
 
 function App() {
-
   return (
-  <>    
-    <LabeledButton label="" buttonText="Example Button" />
-    <LabeledButton label="" buttonText="Example Button" />
-    <LabeledButton label="" buttonText="Example Button" />
-  </>
-  )
+    <Background>
+      <main className="flex min-h-screen w-full items-center justify-center">
+        <img
+          src="/Hotline_Miami_Logo.png"
+          alt="Hotline Miami Logo"
+          className="w-[80%] max-w-[650px] h-auto object-contain"
+        />
+      </main>
+    </Background>
+  );
 }
 
-export default App
+export default App;
